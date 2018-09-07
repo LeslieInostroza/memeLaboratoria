@@ -5,6 +5,8 @@ import { AppComponent } from './app.component';
 import { MemeComponent } from './meme/meme.component';
 import { MemeFormComponent } from './meme-form/meme-form.component';
 
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations'; // se importa animaciones
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -12,7 +14,8 @@ import { MemeFormComponent } from './meme-form/meme-form.component';
     MemeFormComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
