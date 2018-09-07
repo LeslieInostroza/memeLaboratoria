@@ -6,16 +6,18 @@ import { MemeComponent } from './meme/meme.component';
 import { MemeFormComponent } from './meme-form/meme-form.component';
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations'; // se importa animaciones
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
-  declarations: [
+  declarations: [ // van los componenetes
     AppComponent,
     MemeComponent,
     MemeFormComponent
   ],
-  imports: [
+  imports: [ // import = modulos
     BrowserModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
