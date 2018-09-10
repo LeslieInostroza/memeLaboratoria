@@ -29,5 +29,6 @@ export class MemeFormComponent implements OnInit {
       image: this.memeForm.value.image,
       description: this.memeForm.value.description
     });
+    this.memeForm.reset(); //limpiar validacion
   }
 }
