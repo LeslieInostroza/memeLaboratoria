@@ -8,20 +8,29 @@ import { MemeFormComponent } from './meme-form/meme-form.component';
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations'; // se importa animaciones
 import {MatCardModule} from '@angular/material/card';
+// importacion de firebase y angularfire
+import { AngularFireModule } from 'angularfire2';
+import { environment } from '../environments/environment';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+import { AuthService } from './auth.service';
+import { AuthFormComponent } from './auth-form/auth-form.component'; // ng generate service auth - ng g s auth, se crrea servidor
 
 @NgModule({
   declarations: [ // van los componenetes
     AppComponent,
     MemeComponent,
-    MemeFormComponent
+    MemeFormComponent,
+    AuthFormComponent
   ],
   imports: [ // import = modulos
     BrowserModule,
     BrowserAnimationsModule,
     MatCardModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -3,8 +3,16 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
-};
+  production: false,
+  firebase: {
+    apiKey: "AIzaSyBXFAPoKVTbx56BW_lmj3C_rf_F58xyFUw",
+    authDomain: "memelaboratoria.firebaseapp.com",
+    databaseURL: "https://memelaboratoria.firebaseio.com",
+    projectId: "memelaboratoria",
+    storageBucket: "memelaboratoria.appspot.com",
+    messagingSenderId: "466162248524"
+  }
+}
 
 /*
  * In development mode, for easier debugging, you can ignore zone related error
